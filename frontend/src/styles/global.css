@@ -33,3 +33,21 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .link { border: none; background: none; color: var(--brand); cursor: pointer; padding: 0; }
 .page-foot { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; color: var(--muted); }
 .error-text { color: #b42318; }
+.notice-text { color: #067647; }
+.edit-panel { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; }
+.edit-title { margin: 0 0 10px; font-size: 14px; }
+.edit-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px 16px; }
+.edit-item span { display: block; font-size: 12px; color: var(--muted); margin-bottom: 2px; }
+.edit-item input, .edit-item select { width: 100%; border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; font-size: 13px; background: #fff; }
+.edit-actions { display: flex; gap: 8px; margin-top: 12px; }
+.form-error { margin-top: 8px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.form-error .error-text { margin: 0; }
+.row-violation { background: #fef3f2; }
+.violation-tag { color: #b42318; font-size: 12px; }
+.ok-tag { color: #067647; font-size: 12px; }
+
+@media print {
+  .app-side, .app-head, .page-actions, .filter-bar, .row-actions, .page-foot, .edit-panel { display: none !important; }
+  .app-main { padding: 0; }
+  .data-table th, .data-table td { border-color: #000; }
+}

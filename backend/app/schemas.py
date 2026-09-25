@@ -107,11 +107,23 @@ class PlanEntry(BaseModel):
     field_0: str | None = None  # 计划编号
     field_1: str | None = None  # 养护类型
     field_2: str | None = None  # 养护对象
-    field_3: str | None = None  # 计划工期
-    field_4: str | None = None  # 预算金额
-    field_5: str | None = None  # 编制人员
-    field_6: str | None = None  # 审批人员
-    field_7: str | None = None  # 计划状态
+    field_3: str | None = None  # 计划开始日期
+    field_4: str | None = None  # 计划结束日期
+    field_5: str | None = None  # 计划工期
+    field_6: str | None = None  # 预算金额
+    field_7: str | None = None  # 编制人员
+
+class PlanRuleEntry(BaseModel):
+    """编排规则明细结构。"""
+
+    field_0: str | None = None  # 规则编号
+    field_1: str | None = None  # 养护类型
+    field_2: str | None = None  # 间隔天数
+    field_3: str | None = None  # 提前天数
+    field_4: str | None = None  # 适用对象
+    field_5: str | None = None  # 生效日期
+    field_6: str | None = None  # 编制人员
+    field_7: str | None = None  # 规则状态
 
 class WorkEntry(BaseModel):
     """施工任务明细结构。"""

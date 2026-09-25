@@ -8,6 +8,7 @@ const Patrol = () => import('@/views/patrol/index.vue')
 const Disease = () => import('@/views/disease/index.vue')
 const Assess = () => import('@/views/assess/index.vue')
 const Plan = () => import('@/views/plan/index.vue')
+const PlanRule = () => import('@/views/planrule/index.vue')
 const Work = () => import('@/views/work/index.vue')
 const Accept = () => import('@/views/accept/index.vue')
 const Pothole = () => import('@/views/pothole/index.vue')
@@ -31,6 +32,7 @@ const router = createRouter({
     { path: '/disease', name: 'disease', component: Disease },
     { path: '/assess', name: 'assess', component: Assess },
     { path: '/plan', name: 'plan', component: Plan },
+    { path: '/planrule', name: 'planrule', component: PlanRule },
     { path: '/work', name: 'work', component: Work },
     { path: '/accept', name: 'accept', component: Accept },
     { path: '/pothole', name: 'pothole', component: Pothole },
