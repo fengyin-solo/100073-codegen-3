@@ -19,6 +19,17 @@ class ActionResult(BaseModel):
     ok: bool
     message: str
     entry: dict[str, Any] | None = None
+    violations: list[dict[str, Any]] = Field(default_factory=list)
+
+
+class RuleResult(BaseModel):
+    """养护类型编排规则保存结果，附带按新规则重判存量计划的结论。"""
+
+    ok: bool
+    message: str
+    rule: dict[str, Any] | None = None
+    recheck_message: str | None = None
+    flagged: list[dict[str, Any]] = Field(default_factory=list)
 
 
 class EntryPayload(BaseModel):
